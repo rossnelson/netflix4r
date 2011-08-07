@@ -22,7 +22,7 @@ module NetFlix
     end
 
     def require_credentials
-      raise( ArgumentError, "You must configure your NetFlix API key and secret before using flix4r.") unless credentials.valid?
+      raise( ArgumentError, "You must configure your NetFlix API key and secret before using netflix4r.") unless credentials.valid?
     end
 
     def signature_base_string
