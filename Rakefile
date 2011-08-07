@@ -13,12 +13,13 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "netflix4r"
-  gem.homepage = "http://github.com/rossnelson/flix4r"
+  gem.homepage = "http://github.com/rossnelson/netflix4r"
   gem.license = "MIT"
   gem.summary = %Q{copy of http://code.google.com/p/flix4r/}
   gem.description = %Q{a ruby client for the NetFlix API}
   gem.email = "axcess1@me.com"
   gem.authors = ["rossnelson"]
+  gemspec.files = FileList["[A-Z]*", "{app,config,lib}/**/*"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   gem.add_runtime_dependency 'activesupport'

@@ -1,14 +1,14 @@
-flix4r
+netflix4r
 ==========
 
 a ruby client for the NetFlix API 
 
-Based on the "RESTful" resources provided by the NetFlix API, flix4r provides a clean, if _very_ incomplete, set of models for accessing NetFlixs' (sp?) resources.
+Based on the "RESTful" resources provided by the NetFlix API, flix4r provides a clean, if _very_ incomplete, set of models for accessing NetFlix' resources.
 
 Credentials
 ===========
 
-You must add your netflix credentials to flix4r/lib/oauth.yml. You can get credentials from http://developer.netflix.com/.
+You must add your netflix credentials to flix4r/lib/credentials.yml. You can get credentials from http://developer.netflix.com/.
 
 Example
 ==========
@@ -35,7 +35,7 @@ Example
     ["Robert Redford", "Sidney Poitier", "Ben Kingsley", "Dan Aykroyd", "Mary McDonnell", "River Phoenix", "David Strathairn", "Donal Logue", "Timothy Busfield", "Eddie Jones", "George Hearn", "Lee Garlington", "Stephen Tobolowsky"]
 
 
-Contributing to flix4r
+Contributing to netflix4r
 =========
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
