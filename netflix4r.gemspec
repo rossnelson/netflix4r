@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "credentials.yml",
-    "flix4r.gemspec",
     "lib/flix4r.rb",
     "lib/net_flix.rb",
     "lib/net_flix/.DS_Store",
