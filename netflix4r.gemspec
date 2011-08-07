@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{flix4r}
+  s.name = %q{netflix4r}
   s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -42,6 +42,7 @@ Gem::Specification.new do |s|
     "lib/net_flix/title.rb",
     "lib/valuable.rb",
     "log/netflix.log",
+    "netflix4r.gemspec",
     "rakefile.rb",
     "samples/.DS_Store",
     "samples/actors.rb",
