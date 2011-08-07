@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/19/trunk/lib/net_flix
+END
+credentials.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/19/trunk/lib/net_flix/credentials.rb
+END
+title.rb
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/7/trunk/lib/net_flix/title.rb
+END
+request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/14/trunk/lib/net_flix/request.rb
+END
+authenticator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/14/trunk/lib/net_flix/authenticator.rb
+END
