@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{netflix4r}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["rossnelson"]
@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
-    "lib/flix4r.rb",
     "lib/net_flix.rb",
     "lib/net_flix/api/catalog/titles.rb",
     "lib/net_flix/authenticator.rb",
@@ -33,6 +32,7 @@ Gem::Specification.new do |s|
     "lib/net_flix/credentials.rb",
     "lib/net_flix/request.rb",
     "lib/net_flix/title.rb",
+    "lib/netflix4r.rb",
     "lib/valuable.rb"
   ]
   s.homepage = %q{http://github.com/rossnelson/netflix4r}
