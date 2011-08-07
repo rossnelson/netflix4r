@@ -19,7 +19,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{a ruby client for the NetFlix API}
   gem.email = "axcess1@me.com"
   gem.authors = ["rossnelson"]
-  gemspec.files = FileList["[A-Z]*", "{app,config,lib}/**/*"]
+  gem.files = FileList["[A-Z]*", "{app,config,lib}/**/*"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   gem.add_runtime_dependency 'activesupport'
