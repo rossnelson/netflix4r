@@ -17,51 +17,25 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
-    ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
     "Rakefile",
     "VERSION",
-    "credentials.yml",
     "lib/flix4r.rb",
     "lib/net_flix.rb",
-    "lib/net_flix/.DS_Store",
-    "lib/net_flix/api/.DS_Store",
-    "lib/net_flix/api/catalog/.DS_Store",
     "lib/net_flix/api/catalog/titles.rb",
     "lib/net_flix/authenticator.rb",
-    "lib/net_flix/builders/.DS_Store",
     "lib/net_flix/builders/actor_builder.rb",
     "lib/net_flix/builders/format_builder.rb",
     "lib/net_flix/builders/title_builder.rb",
     "lib/net_flix/credentials.rb",
     "lib/net_flix/request.rb",
     "lib/net_flix/title.rb",
-    "lib/valuable.rb",
-    "log/netflix.log",
-    "netflix4r.gemspec",
-    "rakefile.rb",
-    "samples/.DS_Store",
-    "samples/actors.rb",
-    "samples/download_full_catalog.rb",
-    "samples/formats.rb",
-    "samples/search.rb",
-    "test/actor_builder_test.rb",
-    "test/authenticator_test.rb",
-    "test/credentials_test.rb",
-    "test/format_builder_test.rb",
-    "test/helper.rb",
-    "test/request_test.rb",
-    "test/test.rb",
-    "test/test_flix4r.rb",
-    "test/test_helpers.rb",
-    "test/tests.rb",
-    "test/title_builder_test.rb",
-    "test/title_test.rb"
+    "lib/valuable.rb"
   ]
-  s.homepage = %q{http://github.com/rossnelson/flix4r}
+  s.homepage = %q{http://github.com/rossnelson/netflix4r}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
