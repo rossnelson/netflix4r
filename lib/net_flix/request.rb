@@ -1,6 +1,6 @@
 module NetFlix
   class Request < Valuable
-
+ 
     RESERVED_CHARACTERS = /[^A-Za-z0-9\-\._~]/
 
     has_value :http_method, :default => 'GET'
