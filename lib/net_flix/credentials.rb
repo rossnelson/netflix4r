@@ -1,7 +1,7 @@
 module NetFlix
   class Credentials < Valuable
 
-    CONFIG_FILENAME = File.join( File.dirname(__FILE__), '..', '..', 'credentials.yml')
+    CONFIG_FILENAME = File.join( Rails.root,'config', 'credentials.yml')
     
     has_value :key
     has_value :secret
