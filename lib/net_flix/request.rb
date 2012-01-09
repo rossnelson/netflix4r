@@ -18,7 +18,7 @@ module NetFlix
     end
 
     def authenticator
-      @auth ||= NetFlix::Authenticator.new(:request => self, :credentials => NetFlix.credentials)
+      @auth = NetFlix::Authenticator.new(:request => self, :credentials => NetFlix.credentials)
     end
 
     def target
