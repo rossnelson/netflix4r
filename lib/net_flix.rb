@@ -1,17 +1,16 @@
 module NetFlix
-
   class << self
-	  
+
     def credentials
       @credentials ||= NetFlix::Credentials.from_file 
     end
-  
+
     def logfile
-      File.join( File.dirname(__FILE__), '..', 'log', 'netflix.log' )
+      File.join( File.expand_path('log'), 'netflix.log' )
     end
 
     def create_logger
-      logdir = File.join( File.dirname(__FILE__), '..', 'log' )
+      logdir = File.join( File.expand_path('log') )
       Dir.mkdir(logdir) unless File.exists? logdir
 
       Logger.new( logfile ) 

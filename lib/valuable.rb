@@ -27,13 +27,13 @@ class Valuable
     def has_value(name, options={})
       attributes << name 
       defaults[name] = options[:default] unless options[:default].nil?
-      
+
       create_accessor_for(name)
       create_setter_for(name, options[:klass], options[:default])
     end
 
     def create_setter_for(name, klass, default)
-        
+
       if klass == nil
         define_method "#{name}=" do |value|
           attributes[name] = value 
@@ -47,22 +47,22 @@ class Valuable
         end
 
       elsif klass == String
-	
-	define_method "#{name}=" do |value|
+
+        define_method "#{name}=" do |value|
           value_as_string = value && value.to_s
           attributes[name] = value_as_string
-	end
+        end
 
       else
 
         define_method "#{name}=" do |value|
           if value.nil?
             attributes[name] = nil 
-	  elsif value.is_a? klass
-	    attributes[name] = value
-	  else
-	    attributes[name] = klass.new(value)
-	  end
+          elsif value.is_a? klass
+            attributes[name] = value
+          else
+            attributes[name] = klass.new(value)
+          end
         end
       end
     end
