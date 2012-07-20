@@ -3,7 +3,7 @@ require File.join( File.dirname(__FILE__), 'test.rb')
 class CredentialsTest < Test::Unit::TestCase
 
   def file_contents
-    {:key => :value}.to_yaml
+    {key: :value}.to_yaml
   end
 
   def test_that_credentials_file_is_not_loaded_if_it_dne
@@ -20,7 +20,7 @@ class CredentialsTest < Test::Unit::TestCase
 
   def test_that_values_from_file_are_present
     File.stubs(:exist?).returns(true)
-    File.stubs(:open).returns({:key => :my_key, :secret => 'quiet!'}.to_yaml)
+    File.stubs(:open).returns({key: :my_key, secret: 'quiet!'}.to_yaml)
     assert_equal :my_key, NetFlix::Credentials.from_file.key
   end
 

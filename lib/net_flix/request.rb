@@ -3,9 +3,9 @@ module NetFlix
  
     RESERVED_CHARACTERS = /[^A-Za-z0-9\-\._~]/
 
-    has_value :http_method, :default => 'GET'
-    has_value :url, :default => 'http://api.netflix.com/catalog/titles/index'
-    has_value :parameters, :klass => HashWithIndifferentAccess, :default => {}
+    has_value :http_method, default: 'GET'
+    has_value :url, default: 'http://api.netflix.com/catalog/titles/index'
+    has_value :parameters, klass: HashWithIndifferentAccess, default: {}
 
     def ordered_keys
       parameters.keys.sort
@@ -18,7 +18,7 @@ module NetFlix
     end
 
     def authenticator
-      @auth = NetFlix::Authenticator.new(:request => self, :credentials => NetFlix.credentials)
+      @auth = NetFlix::Authenticator.new(request: self, credentials: NetFlix.credentials)
     end
 
     def target

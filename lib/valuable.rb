@@ -74,7 +74,7 @@ class Valuable
     end
 
     def has_collection(name)
-      has_value(name, :default => [] )
+      has_value(name, default: [] )
     end 
 
   end

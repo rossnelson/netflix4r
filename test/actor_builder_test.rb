@@ -14,7 +14,7 @@ class ActorBuilderTest < Test::Unit::TestCase
 
   def test_that_cast_reference_is_pulled
 
-    NetFlix::Request.expects(:new).with(:url => 'http://api.netflix.com/catalog/titles/movies/60024073/cast').returns(stub_everything(:send => '<xml/>'))
+    NetFlix::Request.expects(:new).with(url: 'http://api.netflix.com/catalog/titles/movies/60024073/cast').returns(stub_everything(send: '<xml/>'))
     
     xml = %|
               <title_index_item>  

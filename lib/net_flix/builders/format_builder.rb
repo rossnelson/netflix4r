@@ -24,7 +24,7 @@ class FormatBuilder
       if cast_link.nil?
         []
       else
-        request = NetFlix::Request.new(:url => cast_link)
+        request = NetFlix::Request.new(url: cast_link)
         response = request.send
         from_xml(response)
       end
