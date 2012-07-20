@@ -3,7 +3,7 @@ require File.join( File.dirname(__FILE__), 'test.rb')
 class TitleTest < Test::Unit::TestCase
 
   def request_stub
-    stub_everything(:send => '<xml />')
+    stub_everything(send: '<xml />')
   end
 
   def test_that_title_can_go_to_and_from_json

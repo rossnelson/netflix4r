@@ -12,7 +12,7 @@ class FormatBuilderTest < Test::Unit::TestCase
 
   def test_that_format_links_are_followed
 
-    NetFlix::Request.expects(:new).with(:url => 'http://api.netflix.com/catalog/titles/movies/60031755/format_availability').returns(stub_everything(:send => '<xml/>'))
+    NetFlix::Request.expects(:new).with(url: 'http://api.netflix.com/catalog/titles/movies/60031755/format_availability').returns(stub_everything(send: '<xml/>'))
     
     FormatBuilder.from_movie( title_with_link_to_formats )    
   end
