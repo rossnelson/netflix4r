@@ -13,7 +13,7 @@ You must add your netflix credentials to flix4r/lib/credentials.yml. You can get
 Example
 ==========
 
-    list = NetFlix::Title.search(:term => 'sneakers', :max_results => 2)
+    list = NetFlix::Title.search(term: 'sneakers', max_results: 2)
     [#<NetFlix::Title:0x57f0f58 ...>, #<NetFlix::Title:0x57f0f58 ...>] # shortened for readability
     sneakers = list.first
     sneakers.title
