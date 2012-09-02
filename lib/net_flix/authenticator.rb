@@ -5,7 +5,7 @@ module NetFlix
     require 'digest/sha1'
 
     has_value :request
-    has_value :timestamp, default: Time.now.to_i
+    #has_value :timestamp, default: Time.now.to_i
     has_value :nonce, default: rand(1_000_000)
     has_value :credentials
 
@@ -42,7 +42,7 @@ module NetFlix
       {
       'oauth_consumer_key' => key,
       'oauth_signature_method' => 'HMAC-SHA1',
-      'oauth_timestamp' => timestamp,
+      'oauth_timestamp' => Time.now.to_i,
       'oauth_nonce' => nonce,
       'oauth_version' => '1.0'
       }
