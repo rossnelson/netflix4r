@@ -13,7 +13,8 @@ module NetFlix
 
     def parameter_string
       string = ordered_keys.map do |key|
-        "#{key}=#{parameters[key]}"
+        value = (key == "term") ? URI.escape(parameters[key]) : parameters[key]
+        "#{key}=#{value}"
       end.join('&')
     end
 
