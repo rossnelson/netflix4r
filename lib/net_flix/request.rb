@@ -1,6 +1,6 @@
 module NetFlix
   class Request < Valuable
- 
+
     RESERVED_CHARACTERS = /[^A-Za-z0-9\-\._~]/
 
     has_value :http_method, default: 'GET'
@@ -13,7 +13,8 @@ module NetFlix
 
     def parameter_string
       string = ordered_keys.map do |key|
-        "#{key}=#{parameters[key]}"
+        value = (key == "term") ? URI.escape(parameters[key]) : parameters[key]
+        "#{key}=#{value}"
       end.join('&')
     end
 
@@ -49,7 +50,7 @@ module NetFlix
     end
 
     def validate_http_method
-      errors << "HTTP method must be POST or GET, but I got #{http_method}" unless ['POST', 'GET'].include? http_method 
+      errors << "HTTP method must be POST or GET, but I got #{http_method}" unless ['POST', 'GET'].include? http_method
     end
 
   end
