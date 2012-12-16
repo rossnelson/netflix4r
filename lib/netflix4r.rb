@@ -13,7 +13,7 @@
  require 'valuable.rb'
  require 'active_support/core_ext/hash/indifferent_access'
 
- lib = File.join("../", 'lib')
+ lib = File.join(this_dir, "../", 'lib')
  builders = File.join(lib, 'net_flix', 'builders')
 
  require 'net_flix'
