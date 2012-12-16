@@ -8,6 +8,7 @@ module NetFlix
     has_value :title
     has_value :web_page
     has_collection :delivery_formats
+    has_collection :box_art
 
     def to_json
       attributes.to_json
@@ -36,4 +37,3 @@ module NetFlix
     end
   end # class Title
 end # module NetFlix
-
