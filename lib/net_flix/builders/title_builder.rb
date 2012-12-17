@@ -26,6 +26,7 @@ class TitleBuilder
     set_release_year
     set_title
     set_web_page
+    set_box_art
   end
 
   def set_id
@@ -58,6 +59,12 @@ class TitleBuilder
 
   def set_actors
     @title.actors = ActorBuilder.from_movie(@data)
+  end
+
+  def set_box_art
+    box_arts = @data.search('box_art')
+    @title.box_art = {}
+    %w{ small medium large }.each { |size| @title.box_art[size] = box_arts.attr(size).value }
   end
 
   def title
