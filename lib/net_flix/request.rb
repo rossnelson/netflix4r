@@ -11,9 +11,10 @@ module NetFlix
       parameters.keys.sort
     end
 
+    require "cgi"
     def parameter_string
       string = ordered_keys.map do |key|
-        value = (key == "term") ? URI.escape(parameters[key]) : parameters[key]
+        value = (key == "term") ? CGI.escape(parameters[key]).gsub('+', '%20') : parameters[key]
         "#{key}=#{value}"
       end.join('&')
     end
