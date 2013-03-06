@@ -29,6 +29,7 @@ class TitleBuilder
     set_box_art
     set_runtime
     set_mpaa_rating
+    set_synopsis
   end
 
   def set_id
@@ -75,6 +76,11 @@ class TitleBuilder
 
   def set_mpaa_rating
     @title.mpaa_rating = @data.search('category[@scheme="http://api-public.netflix.com/categories/mpaa_ratings"]').first['label']
+  end
+
+  def set_synopsis
+    synopses = @data.search('synopsis')
+    @title.synopsis = synopses.present? ? synopses.first.text : nil
   end
 
   def title
