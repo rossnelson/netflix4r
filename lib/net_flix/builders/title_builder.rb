@@ -28,6 +28,7 @@ class TitleBuilder
     set_web_page
     set_box_art
     set_runtime
+    set_mpaa_rating
   end
 
   def set_id
@@ -70,6 +71,10 @@ class TitleBuilder
 
   def set_runtime
     @title.runtime = @data.search('runtime').first.text.to_i
+  end
+
+  def set_mpaa_rating
+    @title.mpaa_rating = @data.search('category[@scheme="http://api-public.netflix.com/categories/mpaa_ratings"]').first['label']
   end
 
   def title

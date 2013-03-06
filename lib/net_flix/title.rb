@@ -10,6 +10,7 @@ module NetFlix
     has_collection :delivery_formats
     has_collection :box_art
     has_value :runtime
+    has_value :mpaa_rating
 
     def to_json
       attributes.to_json
