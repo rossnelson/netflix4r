@@ -27,6 +27,7 @@ class TitleBuilder
     set_title
     set_web_page
     set_box_art
+    set_runtime
   end
 
   def set_id
@@ -65,6 +66,10 @@ class TitleBuilder
     box_arts = @data.search('box_art')
     @title.box_art = {}
     %w{ small medium large }.each { |size| @title.box_art[size] = box_arts.attr(size).value }
+  end
+
+  def set_runtime
+    @title.runtime = @data.search('runtime').first.text.to_i
   end
 
   def title
