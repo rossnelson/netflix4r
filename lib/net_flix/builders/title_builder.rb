@@ -71,11 +71,13 @@ class TitleBuilder
   end
 
   def set_runtime
-    @title.runtime = @data.search('runtime').first.text.to_i
+    runtime = @data.search('runtime')
+    @title.runtime = runtime.present? ? runtime.first.text.to_i : nil
   end
 
   def set_mpaa_rating
-    @title.mpaa_rating = @data.search('category[@scheme="http://api-public.netflix.com/categories/mpaa_ratings"]').first['label']
+    rating = @data.search('category[@scheme="http://api-public.netflix.com/categories/mpaa_ratings"]')
+    @title.mpaa_rating = rating.present? ? rating.first['label'] : nil
   end
 
   def set_synopsis
