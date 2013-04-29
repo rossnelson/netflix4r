@@ -27,6 +27,9 @@ class TitleBuilder
     set_title
     set_web_page
     set_box_art
+    set_runtime
+    set_mpaa_rating
+    set_synopsis
   end
 
   def set_id
@@ -65,6 +68,21 @@ class TitleBuilder
     box_arts = @data.search('box_art')
     @title.box_art = {}
     %w{ small medium large }.each { |size| @title.box_art[size] = box_arts.attr(size).value }
+  end
+
+  def set_runtime
+    runtime = @data.search('runtime')
+    @title.runtime = runtime.present? ? runtime.first.text.to_i : nil
+  end
+
+  def set_mpaa_rating
+    rating = @data.search('category[@scheme="http://api-public.netflix.com/categories/mpaa_ratings"]')
+    @title.mpaa_rating = rating.present? ? rating.first['label'] : nil
+  end
+
+  def set_synopsis
+    synopses = @data.search('synopsis')
+    @title.synopsis = synopses.present? ? synopses.first.text : nil
   end
 
   def title
